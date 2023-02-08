@@ -6,8 +6,8 @@ export default  function ColorPickerGameLogic (){
     let message = ref("Pick a color...");
 
     const matchColor = (value) => {
-      // do a random color based on the array index;
-      const randomNumber = Math.floor(Math.random() * 3) + 1; //between 1 - 4
+      // do a random color based on the array index dynamically;
+      const randomNumber = Math.floor(Math.random() * `${colors.length - 1}`) + 1; //between 1 -  array length
 
       if (colors[randomNumber] === value) {
         message.value = `You win... [answer: ${colors[randomNumber]}]`;
